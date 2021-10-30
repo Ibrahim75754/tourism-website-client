@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCzjbhXPZVkZnsi1Xw_A0b4HNRoveaj2YE",
-    authDomain: "healthcare-3e21b.firebaseapp.com",
-    projectId: "healthcare-3e21b",
-    storageBucket: "healthcare-3e21b.appspot.com",
-    messagingSenderId: "730968860176",
-    appId: "1:730968860176:web:39292027025572a97a4c95"
+    apiKey: "AIzaSyC9GMi1ksVRPfZ9tpv9FnDgfOhPY5vljXE",
+    authDomain: "travel-1d0b6.firebaseapp.com",
+    projectId: "travel-1d0b6",
+    storageBucket: "travel-1d0b6.appspot.com",
+    messagingSenderId: "458695429222",
+    appId: "1:458695429222:web:c77a623bf3074807d771a7"
 };
 export default firebaseConfig;
