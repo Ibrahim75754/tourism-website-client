@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Footer from '../Shared/Footer';
@@ -8,6 +9,11 @@ const AddNewPAckage = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
+        // use AXIOS for post into data base
+        axios.post('http://localhost:5000/packages', data)
+            .then(res => {
+                console.log(res);
+            })
     };
     return (
         <div>
