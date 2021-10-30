@@ -15,7 +15,7 @@ const Services = () => {
                 <h1>POPULAR PACKAGES</h1>
                 <p>The practice involves swishing oil around in your mouth to remove bacteria, which can turn into plaque and cause your teeth to look yellow.</p>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     services.map(service => <Service
                         key={service.id}
