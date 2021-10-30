@@ -18,12 +18,25 @@ const Header = () => {
                     <Navbar.Brand className="logo-name fs-3">TravelBD</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto fw-bold">
-                            <NavLink activeStyle={style} className="nav-link" to="/home">Home</NavLink>
-                            <NavLink activeStyle={style} className="nav-link" to="/doctors">Doctors</NavLink>
-                            <NavLink activeStyle={style} className="nav-link" to="/about-us">About Us</NavLink>
 
-                        </Nav>
+
+                        {
+                            user.email ?
+                                <Nav className="me-auto fw-bold">
+                                    <NavLink activeStyle={style} className="nav-link" to="/home">Home</NavLink>
+                                    <NavLink activeStyle={style} className="nav-link" to="/myOrders">My Orders</NavLink>
+                                    <NavLink activeStyle={style} className="nav-link" to="/managePackage">Manage All Package</NavLink>
+                                    <NavLink activeStyle={style} className="nav-link" to="/addNewPAckage">Add Package</NavLink>
+                                </Nav>
+                                :
+                                <Nav className="me-auto fw-bold">
+                                    <NavLink activeStyle={style} className="nav-link" to="/home">Home</NavLink>
+                                </Nav>
+
+                        }
+
+
+
                         <Nav>
 
                             {

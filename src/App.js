@@ -1,7 +1,6 @@
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import AboutUs from './component/AboutUs/AboutUs';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
 import Registration from './component/Registratration/Registration';
@@ -9,7 +8,9 @@ import NotFound from './component/NotFound/NotFound';
 import ServiceDetails from './component/ServiceDetails/ServiceDetails';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
-import Doctors from './component/Doctors/Doctors';
+import ManageAllPackage from './component/Admin/ManageAllPackage';
+import MyOrders from './component/Admin/MyOrders';
+import AddNewPAckage from './component/Admin/AddNewPAckage';
 
 function App() {
   return (
@@ -26,11 +27,14 @@ function App() {
             <PrivateRoute exact path="/home/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <PrivateRoute exact path="/doctors">
-              <Doctors></Doctors>
+            <PrivateRoute exact path="/myOrders">
+              <MyOrders></MyOrders>
             </PrivateRoute>
-            <PrivateRoute exact path="/about-us">
-              <AboutUs></AboutUs>
+            <PrivateRoute exact path="/managePackage">
+              <ManageAllPackage></ManageAllPackage>
+            </PrivateRoute>
+            <PrivateRoute exact path="/addNewPackage">
+              <AddNewPAckage></AddNewPAckage>
             </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
