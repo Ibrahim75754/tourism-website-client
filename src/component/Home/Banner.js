@@ -1,16 +1,13 @@
 import React from 'react';
-import './Banner.css';
-
+import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className="banner text-light">
-            <div className="dark-overly">
-                <div className="text-position">
-                    <div className="w-50">
-                        <h1 className="title-font">Highly Experienced Dental Doctor</h1>
-                        <h4 className="title-des">Our specialists are highly compassionate and professional in dealing with dental heath. They are experienced in industry.</h4>
-                    </div>
+        <div className="banner text-warning text-center">
+            <div className="dark-overly text-position">
+                <div className="">
+                    <h1>TRAVELLING AROUND THE WORLD </h1>
+                    <h4>With tripsDays</h4>
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import UseAuth from '../../hooks/UseAuth';
-import logo from './../../img/logo/download.png';
+
 import './Header.css';
 
 const Header = () => {
@@ -14,8 +14,8 @@ const Header = () => {
         <div className="header-bg">
             <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                    <img className="logo me-2" src={logo} alt="" />
-                    <Navbar.Brand className="logo-name fs-3">PureSmile</Navbar.Brand>
+
+                    <Navbar.Brand className="logo-name fs-3">TravelBD</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto fw-bold">

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer-bg py-5">
             <div className="container text-light">
                 <div className="text-center">
-                    <h1 className="text-warning">tripsDays</h1>
+                    <h1 className="text-warning">TravelBD</h1>
                     <p>Be designed and classified scientifically, courses are suitable to every levels, ensuring to maximize student’s capacity. You will find out many interesting things inside. Let’s discover right now!</p>
                 </div>
                 <hr />
