@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 
@@ -8,11 +9,12 @@ const ServiceDetails = () => {
     const { serviceId } = useParams();
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('./../services.json')
+        fetch('http://localhost:5000/packages')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data =>
+                setServices(data));
     }, []);
-    const details = services.find(service => service.id === parseInt(serviceId));
+    const details = services.find(service => service._id === serviceId);
     console.log(details)
     return (
         <div>
@@ -29,14 +31,14 @@ const ServiceDetails = () => {
                     <div className="col-md-6">
                         <div className="py-3">
                             <h1>{details?.name}</h1>
-                            <p>Service No. {serviceId}</p>
+                            <p>Package Id No. {serviceId}</p>
                         </div>
-                        <h5>Doctor: Dr. {details?.doctor}</h5>
-
-                        <p>Fee: ${details?.price}</p><br />
+                        <p>Packages Offering price: ${details?.price}</p><br />
                         <h6>Details:</h6>
                         <p>{details?.description}</p>
-                        <button className="btn btn-color mt-3 py-3 px-5 text-white">Appointment Now !!!</button>
+                        <Link to="/placeOrder">
+                            <button className="btn btn-color mt-3 py-3 px-5 text-white">Book Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>

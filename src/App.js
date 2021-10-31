@@ -11,6 +11,7 @@ import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import ManageAllPackage from './component/Admin/ManageAllPackage';
 import MyOrders from './component/Admin/MyOrders';
 import AddNewPAckage from './component/Admin/AddNewPAckage';
+import PlaceOrder from './component/PlaceOrder/PlaceOrder';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <PrivateRoute exact path="/home/:serviceId">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <PrivateRoute exact path="/placeOrder">
+              <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <PrivateRoute exact path="/myOrders">
               <MyOrders></MyOrders>
