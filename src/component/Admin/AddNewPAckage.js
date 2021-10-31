@@ -10,7 +10,7 @@ const AddNewPAckage = () => {
     const onSubmit = data => {
         console.log(data);
         // use AXIOS for post into data base
-        axios.post('http://localhost:5000/packages', data)
+        axios.post('https://frightful-labyrinth-57921.herokuapp.com/packages', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {

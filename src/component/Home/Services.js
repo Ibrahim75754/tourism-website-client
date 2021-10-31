@@ -4,7 +4,7 @@ import Service from './Service';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://frightful-labyrinth-57921.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);

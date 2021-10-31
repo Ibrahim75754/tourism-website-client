@@ -14,7 +14,7 @@ const PlaceOrder = () => {
         console.log(data);
 
         // use AXIOS for post into data base
-        axios.post('http://localhost:5000/placeOrder', data)
+        axios.post('https://frightful-labyrinth-57921.herokuapp.com/placeOrder', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {
