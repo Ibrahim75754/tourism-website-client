@@ -12,6 +12,7 @@ import ManageAllPackage from './component/Admin/ManageAllPackage';
 import MyOrders from './component/Admin/MyOrders';
 import AddNewPAckage from './component/Admin/AddNewPAckage';
 import PlaceOrder from './component/PlaceOrder/PlaceOrder';
+import UpdatePackage from './component/Admin/UpdatePackage';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/managePackage">
               <ManageAllPackage></ManageAllPackage>
+            </PrivateRoute>
+            <PrivateRoute exact path="/packages/update/:id">
+              <UpdatePackage></UpdatePackage>
             </PrivateRoute>
             <PrivateRoute exact path="/addNewPackage">
               <AddNewPAckage></AddNewPAckage>

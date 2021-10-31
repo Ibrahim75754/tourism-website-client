@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 import './ManageAllPackage.css';
@@ -54,7 +55,7 @@ const ManageAllPackage = () => {
                                 <td>{pac.description}</td>
                                 <td>{pac.price} BDT</td>
                                 <td>{pac.duration}</td>
-                                <td><button className="btn btn-success mb-2">Update</button><br /><button onClick={() => handleDelete(pac._id)} className="btn btn-danger">Delete</button></td>
+                                <td><Link to={`packages/update/${pac._id}`}><button className="btn btn-success mb-2">Update</button></Link><br /><button onClick={() => handleDelete(pac._id)} className="btn btn-danger">Delete</button></td>
                             </tr>)
                         }
 
