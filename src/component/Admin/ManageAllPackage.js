@@ -10,10 +10,28 @@ const ManageAllPackage = () => {
             .then(data => setPackages(data));
     }, []);
     let id = 1;
+
+    const handleDelete = id => {
+        const areUsure = window.confirm('Are You Sure, Want To Delete?');
+        if (areUsure) {
+            fetch(`http://localhost:5000/packages/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        alert('Delete Successful');
+                        const remaining = packages.filter(pac => pac._id !== id);
+                        setPackages(remaining);
+                    }
+                })
+        }
+    }
     return (
         <div>
             <Header></Header>
-            <div className="container">
+            <div className="container-fluid">
                 <h1 className="text-center mb-4"> All packages List:</h1>
                 <table className="table table-hover text-center">
                     <thead>
@@ -36,7 +54,7 @@ const ManageAllPackage = () => {
                                 <td>{pac.description}</td>
                                 <td>{pac.price} BDT</td>
                                 <td>{pac.duration}</td>
-                                <td><button className="btn btn-success mb-2">Update</button><br /><button className="btn btn-danger">Delete</button></td>
+                                <td><button className="btn btn-success mb-2">Update</button><br /><button onClick={() => handleDelete(pac._id)} className="btn btn-danger">Delete</button></td>
                             </tr>)
                         }
 
