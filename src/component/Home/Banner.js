@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="dark-overly text-position">
                 <div className="">
                     <h1>TRAVELLING AROUND THE WORLD </h1>
-                    <h4>With tripsDays</h4>
+                    <h4>With TravelBD</h4>
                 </div>
             </div>
         </div>

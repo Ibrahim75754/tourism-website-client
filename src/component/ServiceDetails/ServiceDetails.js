@@ -36,7 +36,7 @@ const ServiceDetails = () => {
                         <p>Packages Offering price: ${details?.price}</p><br />
                         <h6>Details:</h6>
                         <p>{details?.description}</p>
-                        <Link to="/placeOrder">
+                        <Link to={`/placeOrder?${serviceId}`}>
                             <button className="btn btn-color mt-3 py-3 px-5 text-white">Book Now</button>
                         </Link>
                     </div>
