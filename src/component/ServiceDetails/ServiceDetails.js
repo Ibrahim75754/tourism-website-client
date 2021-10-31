@@ -15,7 +15,7 @@ const ServiceDetails = () => {
                 setServices(data));
     }, []);
     const details = services.find(service => service._id === serviceId);
-    console.log(details)
+    // console.log(details)
     return (
         <div>
             <Header></Header>
@@ -36,7 +36,7 @@ const ServiceDetails = () => {
                         <p>Packages Offering price: ${details?.price}</p><br />
                         <h6>Details:</h6>
                         <p>{details?.description}</p>
-                        <Link to={`/placeOrder?${serviceId}`}>
+                        <Link to={`/placeOrder/${serviceId}`}>
                             <button className="btn btn-color mt-3 py-3 px-5 text-white">Book Now</button>
                         </Link>
                     </div>
