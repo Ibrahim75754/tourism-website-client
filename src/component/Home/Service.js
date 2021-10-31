@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './service.css';
 
 const Service = (props) => {
-    const { id, name, img, description } = props.service;
+    const { _id, name, img, description, price, duration } = props.service;
     return (
         <div>
             <div className="col">
@@ -12,7 +12,9 @@ const Service = (props) => {
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{description}</p>
-                        <NavLink to={`/home/${id}`} className="btn btn-color py-2 px-5">More Details</NavLink>
+                        <h4>Offering price: {price} BDT</h4>
+                        <p>Duration: {duration}</p>
+                        <NavLink to={`/home/${_id}`} className="btn btn-color py-2 px-5">Book Now</NavLink>
 
                     </div>
                 </div>
