@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import UseAuth from '../../hooks/UseAuth';
 import Footer from '../Shared/Footer';
 import Header from '../Shared/Header';
 
 const MyOrders = () => {
-    const { user } = UseAuth();
-
     const [packages, setPackages] = useState([]);
     useEffect(() => {
         fetch('https://frightful-labyrinth-57921.herokuapp.com/myOrders')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, []);
-    const myOrders = packages.filter(pac => pac.email === user.email);
-    console.log(myOrders)
     let Id = 1;
 
     const handleDelete = id => {
@@ -36,7 +31,9 @@ const MyOrders = () => {
     return (
         <div>
             <Header></Header>
-            <h1 className="text-center my-4">My Orders List</h1>
+
+
+            <h2 className="text-center my-4">All order list :</h2>
             <div className="table-responsive">
                 <table class="table table-hover text-center">
                     <thead>
@@ -52,7 +49,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            myOrders.map(pac => <tr>
+                            packages.map(pac => <tr>
                                 <th scope="row">{Id++}</th>
                                 <td>{pac.packageId}</td>
                                 <td>{pac.name}</td>

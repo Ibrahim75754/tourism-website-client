@@ -9,10 +9,11 @@ import ServiceDetails from './component/ServiceDetails/ServiceDetails';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import ManageAllPackage from './component/Admin/ManageAllPackage';
-import MyOrders from './component/Admin/MyOrders';
+import AllOrders from './component/Admin/AllOrders';
 import AddNewPAckage from './component/Admin/AddNewPAckage';
 import PlaceOrder from './component/PlaceOrder/PlaceOrder';
 import UpdatePackage from './component/Admin/UpdatePackage';
+import MyOrders from './component/Admin/MyOrders';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/myOrders">
               <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute exact path="/allOrders">
+              <AllOrders></AllOrders>
             </PrivateRoute>
             <PrivateRoute exact path="/managePackage">
               <ManageAllPackage></ManageAllPackage>

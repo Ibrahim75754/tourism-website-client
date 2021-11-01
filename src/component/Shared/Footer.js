@@ -11,13 +11,13 @@ const Footer = () => {
                 </div>
                 <hr />
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-md-4">
                         <h4>GET IN TOUCH</h4>
                         <p><span className="fas fa-map-marker-alt"></span> G5 Technology JSC, Room 1101, Glory Palace Apartment, Truong Thi Ward, Vinh City, Nghe An Province, VietNam(42000).</p>
                         <p><i className="fas fa-phone-alt"></i> (+84) 388-969-888</p>
                         <p><i className="fas fa-envelope-open-text"></i> g5plus@outlook.com</p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-6">
                         <h4>ASK A QUESTION</h4>
                         <div className="mb-3">
                             <input type="email" className="form-control" placeholder="Email" />

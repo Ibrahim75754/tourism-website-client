@@ -25,6 +25,7 @@ const Header = () => {
                                 <Nav className="me-auto fw-bold">
                                     <NavLink activeStyle={style} className="nav-link" to="/home">Home</NavLink>
                                     <NavLink activeStyle={style} className="nav-link" to="/myOrders">My Orders</NavLink>
+                                    <NavLink activeStyle={style} className="nav-link" to="/allOrders">All Orders</NavLink>
                                     <NavLink activeStyle={style} className="nav-link" to="/managePackage">Manage All Package</NavLink>
                                     <NavLink activeStyle={style} className="nav-link" to="/addNewPAckage">Add Package</NavLink>
                                 </Nav>

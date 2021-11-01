@@ -34,34 +34,37 @@ const ManageAllPackage = () => {
             <Header></Header>
             <div className="container-fluid">
                 <h1 className="text-center mb-4"> All packages List:</h1>
-                <table className="table table-hover text-center">
-                    <thead>
-                        <tr>
-                            <th scope="col">Serial</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Duration</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            packages.map(pac => <tr>
-                                <th scope="row">{id++}</th>
-                                <td><img className="" src={pac.img} alt="" /></td>
-                                <td>{pac.name}</td>
-                                <td>{pac.description}</td>
-                                <td>{pac.price} BDT</td>
-                                <td>{pac.duration}</td>
-                                <td><Link to={`packages/update/${pac._id}`}><button className="btn btn-success mb-2">Update</button></Link><br /><button onClick={() => handleDelete(pac._id)} className="btn btn-danger">Delete</button></td>
-                            </tr>)
-                        }
+                <div className="table-responsive">
+                    <table className="table table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Serial</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                packages.map(pac => <tr>
+                                    <th scope="row">{id++}</th>
+                                    <td><img className="" src={pac.img} alt="" /></td>
+                                    <td>{pac.name}</td>
+                                    <td>{pac.description.slice(0, 100)}...</td>
+                                    <td>{pac.price} BDT</td>
+                                    <td>{pac.duration}</td>
+                                    <td><Link to={`packages/update/${pac._id}`}><button className="btn btn-success mb-2">Update</button></Link><br /><button onClick={() => handleDelete(pac._id)} className="btn btn-danger">Delete</button></td>
+                                </tr>)
+                            }
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+
 
             </div>
             <Footer></Footer>
