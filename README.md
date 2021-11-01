@@ -6,6 +6,12 @@ It is a single page application made with ReactJS, Tailwind CSS etc...
 
 - [Live Site Link](https://travel-1d0b6.web.app//)
 
+### `①  You can See Our All Packages` 
+### `②   You can Book Packages` 
+### `②   You can also manages packages` 
+### `②   You can also Add packages` 
+### `③  Easy to use & simple user interface`
+
 ## Technologies
 
 [![React Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://github.com/19smabtahinoor)
