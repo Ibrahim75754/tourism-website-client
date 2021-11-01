@@ -8,7 +8,7 @@ const UpdatePackage = () => {
 
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch(`https://frightful-labyrinth-57921.herokuapp.com/packages/update/${id}`)
+        fetch(`http://localhost:5000/packages/update/${id}`)
             .then(res => res.json())
             .then(data =>
                 setPackages(data));
@@ -42,7 +42,7 @@ const UpdatePackage = () => {
         setPackages(update);
     }
     const handleUpdatePackage = e => {
-        fetch(`https://frightful-labyrinth-57921.herokuapp.com/packages/update/${id}`, {
+        fetch(`http://localhost:5000/packages/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -51,7 +51,9 @@ const UpdatePackage = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.modifiedCount > 0) {
+                    alert('update successful')
+                }
             })
         e.preventDefault();
 

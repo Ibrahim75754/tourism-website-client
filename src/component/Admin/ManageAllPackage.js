@@ -6,7 +6,7 @@ import './ManageAllPackage.css';
 const ManageAllPackage = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('https://frightful-labyrinth-57921.herokuapp.com/packages')
+        fetch('http://localhost:5000/packages')
             .then(res => res.json())
             .then(data => setPackages(data));
     }, []);
@@ -15,7 +15,7 @@ const ManageAllPackage = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`https://frightful-labyrinth-57921.herokuapp.com/${id}`, {
+            fetch(`http://localhost:5000/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
