@@ -59,6 +59,7 @@ const ServiceDetails = () => {
                                 <p>Packages Offering price: ${details?.price}</p><br />
                                 <h6>Details:</h6>
                                 <p>{details?.description}</p>
+
                             </div>
                         </div>
                     </div>
@@ -69,6 +70,7 @@ const ServiceDetails = () => {
                                 <input className="w-50 mb-3"  {...register("name")} type="text" value={user.displayName} required />
                                 <input className="w-50 mb-3" {...register("email")} type="email" value={user.email} required />
                                 <input className="w-50 mb-3"  {...register("packageId")} type="text" value={serviceId} />
+                                <input className="w-50 mb-3"  {...register("packageName")} type="text" value={details?.name} />
                                 <textarea className="w-50 mb-3"  {...register("address")} type="text" placeholder="Address" required />
                                 <input className="w-50 mb-3"  {...register("phone")} type="number" placeholder="Phone Number" required />
                                 <input className="btn btn-warning w-50 mb-3" type="submit" value="Place Order" />

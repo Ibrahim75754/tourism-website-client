@@ -15,7 +15,7 @@ const ManageAllPackage = () => {
     const handleDelete = id => {
         const areUsure = window.confirm('Are You Sure, Want To Delete?');
         if (areUsure) {
-            fetch(`http://localhost:5000/${id}`, {
+            fetch(`http://localhost:5000/packages/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
