@@ -6,8 +6,8 @@ It is a single page application made with ReactJS, Tailwind CSS etc...
 
 - [Live Site Link](https://travel-1d0b6.web.app//)
 
-### `①  You can See Our All Packages` 
-### `②   You can Book Packages` 
+### `①  This is a travel agency’s website where users can book packages when logged in.` 
+### `②   And also view their bookings on the Booking page.` 
 ### `②   You can also manages packages` 
 ### `②   You can also Add packages` 
 ### `③  Easy to use & simple user interface`
